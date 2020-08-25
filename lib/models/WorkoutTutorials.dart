@@ -13,10 +13,10 @@ Map tutorials = {
   TutorialCard(name: "FT-325",goals:["15 times 40lbs","12 times 50lbs","8 times 60 lbs"],imageUrl:"lib/images/FT-325.png"),
   TutorialDivider(),
   TutorialCard(name: "Close-grip Bench press",goals:["Warm-up 5kg","15 times 7.5kg","10 times 10kg"],imageUrl:"lib/images/close-grip.png"),
-  TutorialDivider("Dvojcvik-opakovat 3 x",false),
-    TutorialCard(name:"Kliky",goals:["10 times"],imageUrl: "lib/images/pushUps.png",),
+  TutorialDivider("Double exercise-repeat 3x",false),
+    TutorialCard(name:"Push-ups",goals:["10 times"],imageUrl: "lib/images/pushUps.png",),
     TutorialDivider(),
-    TutorialCard(name:"Věž - šikmá týč",goals:["15 times 50lbs"],imageUrl: "lib/images/FT-325.png",),
+    TutorialCard(name:"Tower - slanted bar",goals:["15 times 50lbs"],imageUrl: "lib/images/FT-325.png",),
 
   ]),
   "Back/Shoulders":Tutorial("Back/Shoulders", [

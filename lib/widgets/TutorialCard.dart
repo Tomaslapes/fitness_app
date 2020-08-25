@@ -71,7 +71,8 @@ class _TutorialCardState extends State<TutorialCard> {
                           ],
                         ));
                       },
-                      itemCount: goals.length,),
+                      itemCount: goals.length,
+                      physics: NeverScrollableScrollPhysics(),),
                     ),
                   ),
                   imageUrl == null?SizedBox.shrink():Image.asset(imageUrl,

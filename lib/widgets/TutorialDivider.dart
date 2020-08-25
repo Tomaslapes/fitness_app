@@ -18,7 +18,7 @@ class TutorialDivider extends StatelessWidget {
           !showText? SizedBox.shrink():Text(text,
             style: TextStyle(
                 fontFamily: "Open-sans-light",
-                fontSize: largeText? 45:35,
+                fontSize: largeText? 45:32,
                 wordSpacing: 2,
             ),),
           SizedBox(height: 3,),
