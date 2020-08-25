@@ -12,7 +12,7 @@ List<Workout> favWorkouts = [
     rightImageUrl: "lib/images/manArms.png"
   ),
   Workout(
-      name: "Heavy workout",
+      name: "Back/Shoulders",
       minDuration: 85,
       bodyParts: ["Arms","Back","Shoulders"],
       image: AssetImage("lib/images/workout2.png"),

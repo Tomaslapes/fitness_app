@@ -1,7 +1,9 @@
+import 'package:fitness_app/pages/WorkoutGuide.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_app/models/WorkoutModel.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:fitness_app/models/WorkoutTutorials.dart';
 
 class WorkoutScreen extends StatefulWidget {
 
@@ -215,7 +217,10 @@ class _WorkoutScreenState extends State<WorkoutScreen> {
                 // START Button
                 Positioned(
                     child: RaisedButton(
-                      onPressed: (){print("Start ${workoutData.name}");},
+                      onPressed: (){
+                        print("Start ${workoutData.name}");
+                        Navigator.push(context, MaterialPageRoute(builder: (_){return(WorkoutGuide(tutorials[workoutData.name]));}));
+                        },
                     shape:RoundedRectangleBorder(
                       borderRadius:BorderRadius.circular(30)
                     ),
