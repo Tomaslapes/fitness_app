@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:fitness_app/pages/home.dart';
 import 'package:fitness_app/pages/Diary.dart';
+import "package:fitness_app/pages/Calendar.dart";
 
 class MainPage extends StatefulWidget {
   @override
@@ -25,6 +26,7 @@ class _MainPageState extends State<MainPage> {
         });
       }),
       Diary(),
+      Calendar()
     ];
   }
 
@@ -45,7 +47,7 @@ class _MainPageState extends State<MainPage> {
               size: 40,),
             title: SizedBox.shrink(),),
           BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.heart,
+              icon: Icon(Icons.calendar_today,
                 size: 40,),
               title: SizedBox.shrink()),
         ],
