@@ -35,7 +35,7 @@ class _CalendarState extends State<Calendar> {
     return ScopedModel(
       model: scopedCalendar,
       child: Scaffold(
-        appBar: AppBar(title: Text("Calendar"),),
+        appBar: AppBar(title: Text("Calendar"),backgroundColor: Color.fromARGB(255,255,207 , 33),),
         body: ScopedModelDescendant<CalendarData>(
           builder: (context,child,model){
             model.getData();
@@ -49,7 +49,7 @@ class _CalendarState extends State<Calendar> {
                       setState(() {
                         currentDate = date;
                         currentEvents = events;
-                      });;
+                      });
                     },
                     selectedDateTime: currentDate,
                     onDayLongPressed: (day){
@@ -72,6 +72,7 @@ class _CalendarState extends State<Calendar> {
                         fontFamily: "Open-sans-normal"
                     ),
                     selectedDayButtonColor: Color.fromARGB(255,255,207 , 33),
+
                   ),
                   flex: 3,
                 ),
@@ -103,7 +104,7 @@ class _CalendarState extends State<Calendar> {
             ));
           },
         ),
-        backgroundColor: Colors.white60,
+        backgroundColor: Colors.grey[650],
       ),
     );
   }
