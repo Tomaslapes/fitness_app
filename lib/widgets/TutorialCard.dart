@@ -46,7 +46,7 @@ class _TutorialCardState extends State<TutorialCard> {
                 children: [
                   Flexible(
                     child: Padding(
-                      padding: const EdgeInsets.all(10),
+                      padding: const EdgeInsets.fromLTRB(30,0,10,10),
                       child: ListView.builder(itemBuilder: (context,index){
                         return(Row(
                           children: [
@@ -55,7 +55,7 @@ class _TutorialCardState extends State<TutorialCard> {
                                 Text("${index+1}. ",
                                   style: TextStyle(
                                       fontFamily: "Open-sans-light",
-                                      fontSize: 30,
+                                      fontSize: 28,
                                       wordSpacing: 1
                                   ),),
                                 Text(goals[index],
@@ -67,7 +67,6 @@ class _TutorialCardState extends State<TutorialCard> {
                               ],
 
                             ),
-
                           ],
                         ));
                       },
@@ -77,7 +76,7 @@ class _TutorialCardState extends State<TutorialCard> {
                   ),
                   imageUrl == null?SizedBox.shrink():Image.asset(imageUrl,
                       width: 150,
-                  height: 180,)
+                  height: 130,)
                 ],
               ),
             ),
