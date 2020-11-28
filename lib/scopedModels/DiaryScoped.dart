@@ -1,7 +1,7 @@
 import 'package:scoped_model/scoped_model.dart';
 import 'package:mysql1/mysql1.dart';
-import 'package:flutter/material.dart';
 import 'package:fitness_app/models/DiaryEntry.dart';
+import 'package:fitness_app/loginInfo.dart';
 
 class DiaryScoped extends Model{
 
@@ -10,11 +10,11 @@ class DiaryScoped extends Model{
 
   Future<Results> connectToDB(String sqlCommand) async{
     final connection = await MySqlConnection.connect(new ConnectionSettings(
-      host: '31.30.119.245',
-      port: 3307,
-      user: 'basicUser',
-      password: '#tomadelA4718',
-      db: 'WorkoutAPP',
+      host: host,
+      port: port,
+      user: user,
+      password: password,
+      db: db,
     ));
     var results = await connection.query(sqlCommand);
     print(results.runtimeType);

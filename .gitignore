@@ -1,4 +1,5 @@
 # Miscellaneous
+loginInfo.dart
 *.class
 *.log
 *.pyc

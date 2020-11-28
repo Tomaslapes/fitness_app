@@ -3,6 +3,7 @@ import 'package:mysql1/mysql1.dart';
 import 'package:flutter_calendar_carousel/classes/event.dart';
 import 'package:flutter_calendar_carousel/classes/event_list.dart';
 import 'package:flutter/material.dart';
+import 'package:fitness_app/loginInfo.dart';
 
 class CalendarData extends Model{
   bool dataLoaded = false;
@@ -19,11 +20,11 @@ class CalendarData extends Model{
 
   Future<Results> connectToDB(String sqlCommand) async{
     final connection = await MySqlConnection.connect(new ConnectionSettings(
-      host: '31.30.119.245',
-      port: 3307,
-      user: 'basicUser',
-      password: '#tomadelA4718',
-      db: 'WorkoutAPP',
+      host: host,
+      port: port,
+      user: user,
+      password: password,
+      db: db,
     ));
     var results = await connection.query(sqlCommand);
     print(results.runtimeType);
