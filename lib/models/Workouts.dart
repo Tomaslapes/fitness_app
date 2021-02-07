@@ -13,19 +13,19 @@ List<Workout> favWorkouts = [
   ),
   Workout(
       name: "Back/Breast",
-      minDuration: 85,
+      minDuration: 60,
       bodyParts: ["Arms","Back","Shoulders"],
       image: AssetImage("lib/images/backExcer.jpg"),
-      difficulty: 0.7,
+      difficulty: 0.5,
       leftImageUrl: "lib/images/womanArms.png",
       rightImageUrl: "lib/images/manArms.png"
   ),
   Workout(
       name: "Legs/Arms",
-      minDuration: 30,
+      minDuration: 60,
       bodyParts: ["Arms","Legs","Biceps"],
       image: AssetImage("lib/images/legs-workout.jpg"),
-      difficulty: 0.25,
+      difficulty: 0.5,
       leftImageUrl: "lib/images/womanArms.png",
       rightImageUrl: "lib/images/manArms.png"
   ),

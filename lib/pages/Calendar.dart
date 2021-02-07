@@ -22,10 +22,6 @@ class _CalendarState extends State<Calendar> {
     DateTime(2020,08,24),
   ];
 
-  initState(){
-
-  }
-
   List<Event> currentEvents = [];
 
   final CalendarData scopedCalendar = CalendarData();
@@ -35,12 +31,31 @@ class _CalendarState extends State<Calendar> {
     return ScopedModel(
       model: scopedCalendar,
       child: Scaffold(
-        appBar: AppBar(title: Text("Calendar"),backgroundColor: Color.fromARGB(255,255,207 , 33),),
+       // appBar: AppBar(title: Text("Calendar"),backgroundColor: Color.fromARGB(255,255,207 , 33),),
         body: ScopedModelDescendant<CalendarData>(
           builder: (context,child,model){
             model.getData();
             return(Column(
               children: [
+                Stack(
+                  children: [
+                    Image.asset("lib/assets/top.png"),
+                    Positioned(child: Text(
+                      "Calendar",
+                      style: TextStyle(
+                        fontSize: 45,
+                        //fontWeight: FontWeight.w700,
+                        fontFamily: "Open-Sans",//"Noto-Sans-ItalicBold",
+                        letterSpacing: -1,
+                        //"lib/assets/open-sans/OpenSans-BoldItalic.tff"
+                      ),
+                    textAlign: TextAlign.left,
+                    ),
+                      left: 25,
+                      top: 60,
+                    )
+                  ],
+                ),
                 Expanded(
                   child: CalendarCarousel(
                     onCalendarChanged: (date){print("Changed");},
@@ -59,11 +74,19 @@ class _CalendarState extends State<Calendar> {
                       });
                     },
                     todayButtonColor: Colors.orange,
+                    iconColor: Color.fromARGB(255,255,207 , 33),
+                    markedDateWidget: Container(
+                        padding:EdgeInsets.only(top:15),
+                        child: Icon(Icons.fitness_center,
+                        color: Color.fromARGB(255,255,207 , 33),size: 22)),
                     todayTextStyle: TextStyle(fontSize: 22),
                     markedDatesMap: model.markedDateMap,
+                    headerTextStyle: TextStyle(color: Color.fromARGB(255,255,207 , 33),fontSize: 20),
+                    weekdayTextStyle: TextStyle(color: Colors.grey),
+                    weekendTextStyle: TextStyle(color: Color.fromARGB(255,255,207 , 33),fontSize: 20),
                     daysTextStyle: TextStyle(
                       fontSize: 19,
-                      color: Colors.black,
+                      color: Colors.white,
                       fontFamily: "Open-sans-normal"
                     ),
                     selectedDayTextStyle: TextStyle(
@@ -76,18 +99,21 @@ class _CalendarState extends State<Calendar> {
                   ),
                   flex: 3,
                 ),
+                SizedBox(height: 10,),
                 Center(
                   child: Text("Events on:",
                     style:TextStyle(
                         fontFamily: "Open-sans-normal",
-                        fontSize: 20
+                        fontSize: 20,
+                      color: Color.fromARGB(255,255,207 , 33)
                     )),
                 ),
                 Center(
                   child: Text("${currentDate.day}.${currentDate.month}.${currentDate.year}",
                   style: TextStyle(
                     fontFamily: "Open-sans-normal",
-                    fontSize: 25
+                    fontSize: 25,
+                    color: Colors.white
                   ),),
                 ),
                 Expanded(
@@ -104,7 +130,7 @@ class _CalendarState extends State<Calendar> {
             ));
           },
         ),
-        backgroundColor: Colors.grey[650],
+        backgroundColor: Colors.grey[800],
       ),
     );
   }
