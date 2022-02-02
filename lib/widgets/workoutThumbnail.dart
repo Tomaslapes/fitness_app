@@ -49,7 +49,7 @@ class WorkoutThumbnail extends StatelessWidget {
                                 Text(workoutData.bodyParts[0],
                                 style: TextStyle(
                                   fontFamily: "Open-sans-light",
-                                  fontSize: 15,
+                                  fontSize: 13,
                                   color: Color.fromARGB(255, 255, 117, 33),
                                   fontWeight: FontWeight.bold
                                 ),),
@@ -57,7 +57,7 @@ class WorkoutThumbnail extends StatelessWidget {
                                 Text(workoutData.bodyParts[1],
                                 style: TextStyle(
                                     fontFamily: "Open-sans-light",
-                                    fontSize: 15,
+                                    fontSize: 13,
                                     color: Color.fromARGB(255, 255, 117, 33),
                                     fontWeight: FontWeight.bold
                                 ),),
@@ -65,11 +65,13 @@ class WorkoutThumbnail extends StatelessWidget {
                                 Text(workoutData.bodyParts[2],
                                 style: TextStyle(
                                     fontFamily: "Open-sans-light",
-                                    fontSize: 15,
+                                    fontSize: 13,
                                     color: Color.fromARGB(255, 255, 117, 33),
                                     fontWeight: FontWeight.bold
                                 ),),
                               ],
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
 
                             ),
                           )],
